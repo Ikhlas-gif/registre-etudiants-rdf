@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:univ="http://www.example.org/univ#">
+
+  <univ:Etudiant rdf:about="http://www.example.org/etudiants/etudiant2">
+    <univ:nom>Hallou</univ:nom>
+    <univ:prenom>Ikhlas</univ:prenom>
+    <univ:dateNaissance>2004-10-24</univ:dateNaissance>
+    <univ:estInscritA rdf:resource="http://www.example.org/universites/enpo"/>
+    <univ:aParcours rdf:resource="http://www.example.org/parcours/l3-info"/>
+  </univ:Etudiant>
+
+  <univ:Université rdf:about="http://www.example.org/universites/enpo">
+    <rdfs:label>Université d’ENPO</rdfs:label>
+  </univ:Université>
+
+  <univ:Parcours rdf:about="http://www.example.org/parcours/l3-info">
+    <univ:niveau>Licence 3</univ:niveau>
+    <univ:anneeUniversitaire>2024/2025</univ:anneeUniversitaire>
+    <univ:aSuiviCours rdf:resource="http://www.example.org/cours/java"/>
+    <univ:aSuiviCours rdf:resource="http://www.example.org/cours/systemes"/>
+  </univ:Parcours>
+
+  <univ:Cours rdf:about="http://www.example.org/cours/java">
+    <univ:intituleCours>Programmation Java</univ:intituleCours>
+    <univ:faitPartieDuSemestre rdf:resource="http://www.example.org/semestres/s5"/>
+    <univ:aNote rdf:resource="http://www.example.org/notes/note3"/>
+  </univ:Cours>
+
+  <univ:Cours rdf:about="http://www.example.org/cours/systemes">
+    <univ:intituleCours>Systèmes d'exploitation</univ:intituleCours>
+    <univ:faitPartieDuSemestre rdf:resource="http://www.example.org/semestres/s5"/>
+    <univ:aNote rdf:resource="http://www.example.org/notes/note4"/>
+  </univ:Cours>
+
+  <univ:Note rdf:about="http://www.example.org/notes/note3">
+    <univ:valeur>16.0</univ:valeur>
+  </univ:Note>
+
+  <univ:Note rdf:about="http://www.example.org/notes/note4">
+    <univ:valeur>17.5</univ:valeur>
+  </univ:Note>
+
+</rdf:RDF>
+
+

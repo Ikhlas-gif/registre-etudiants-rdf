@@ -1,0 +1,48 @@
+
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:univ="http://www.example.org/univ#">
+
+  <univ:Etudiant rdf:about="http://www.example.org/etudiants/etudiant1">
+    <univ:nom>Belaid</univ:nom>
+    <univ:prenom>Amine</univ:prenom>
+    <univ:dateNaissance>2000-05-14</univ:dateNaissance>
+    <univ:estInscritA rdf:resource="http://www.example.org/universites/oran"/>
+    <univ:aParcours rdf:resource="http://www.example.org/parcours/m1-reseaux"/>
+  </univ:Etudiant>
+
+  <univ:Université rdf:about="http://www.example.org/universites/oran">
+    <rdfs:label>Université d’Oran</rdfs:label>
+  </univ:Université>
+
+  <univ:Parcours rdf:about="http://www.example.org/parcours/m1-reseaux">
+    <univ:niveau>Master 1</univ:niveau>
+    <univ:anneeUniversitaire>2024/2025</univ:anneeUniversitaire>
+    <univ:aSuiviCours rdf:resource="http://www.example.org/cours/reseaux-avances"/>
+    <univ:aSuiviCours rdf:resource="http://www.example.org/cours/protocoles"/>
+  </univ:Parcours>
+
+  <univ:Cours rdf:about="http://www.example.org/cours/reseaux-avances">
+    <univ:intituleCours>Réseaux Avancés</univ:intituleCours>
+    <univ:faitPartieDuSemestre rdf:resource="http://www.example.org/semestres/s1"/>
+    <univ:aNote rdf:resource="http://www.example.org/notes/note1"/>
+  </univ:Cours>
+
+  <univ:Cours rdf:about="http://www.example.org/cours/protocoles">
+    <univ:intituleCours>Protocoles Réseaux</univ:intituleCours>
+    <univ:faitPartieDuSemestre rdf:resource="http://www.example.org/semestres/s1"/>
+    <univ:aNote rdf:resource="http://www.example.org/notes/note2"/>
+  </univ:Cours>
+
+  <univ:Note rdf:about="http://www.example.org/notes/note1">
+    <univ:valeur>15.5</univ:valeur>
+  </univ:Note>
+
+  <univ:Note rdf:about="http://www.example.org/notes/note2">
+    <univ:valeur>14.0</univ:valeur>
+  </univ:Note>
+
+</rdf:RDF>
+
