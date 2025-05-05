@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:foaf="http://xmlns.com/foaf/0.1/"
+         xmlns:doac="http://ramonantonio.net/doac/0.1/"
+         xmlns:univ="http://www.example.org/univ#">
+
+
+  <rdfs:Class rdf:about="univ:Etudiant">
+    <rdfs:label>Étudiant</rdfs:label>
+    <rdfs:subClassOf rdf:resource="foaf:Person"/>
+  </rdfs:Class>
+
+
+  <rdfs:Class rdf:about="univ:Université">
+    <rdfs:label>Université</rdfs:label>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="univ:Parcours">
+    <rdfs:label>Parcours Académique</rdfs:label>
+  </rdfs:Class>
+
+
+  <rdfs:Class rdf:about="univ:Cours">
+    <rdfs:label>Cours</rdfs:label>
+  </rdfs:Class>
+
+
+  <rdfs:Class rdf:about="univ:Semestre">
+    <rdfs:label>Semestre</rdfs:label>
+  </rdfs:Class>
+
+
+  <rdfs:Class rdf:about="univ:Note">
+    <rdfs:label>Note</rdfs:label>
+  </rdfs:Class>
+
+
+  <rdf:Property rdf:about="univ:nom">
+    <rdfs:domain rdf:resource="univ:Etudiant"/>
+    <rdfs:range rdf:resource="xsd:string"/>
+    <rdfs:label>Nom</rdfs:label>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="univ:prenom">
+    <rdfs:domain rdf:resource="univ:Etudiant"/>
+    <rdfs:range rdf:resource="xsd:string"/>
+    <rdfs:label>Prénom</rdfs:label>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="univ:dateNaissance">
+    <rdfs:domain rdf:resource="univ:Etudiant"/>
+    <rdfs:range rdf:resource="xsd:date"/>
+    <rdfs:label>Date de naissance</rdfs:label>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="univ:estInscritA">
+    <rdfs:domain rdf:resource="univ:Etudiant"/>
+    <rdfs:range rdf:resource="univ:Université"/>
+    <rdfs:label>Est inscrit à</rdfs:label>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="univ:aParcours">
+    <rdfs:domain rdf:resource="univ:Etudiant"/>
+    <rdfs:range rdf:resource="univ:Parcours"/>
+    <rdfs:label>A pour parcours</rdfs:label>
+  </rdf:Property>
+
+
+  <rdf:Property rdf:about="univ:niveau">
+    <rdfs:domain rdf:resource="univ:Parcours"/>
+    <rdfs:range rdf:resource="xsd:string"/>
+    <rdfs:label>Niveau</rdfs:label>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="univ:anneeUniversitaire">
+    <rdfs:domain rdf:resource="univ:Parcours"/>
+    <rdfs:range rdf:resource="xsd:string"/>
+    <rdfs:label>Année universitaire</rdfs:label>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="univ:aSuiviCours">
+    <rdfs:domain rdf:resource="univ:Parcours"/>
+    <rdfs:range rdf:resource="univ:Cours"/>
+    <rdfs:label>A suivi le cours</rdfs:label>
+  </rdf:Property>
+
+
+  <rdf:Property rdf:about="univ:intituleCours">
+    <rdfs:domain rdf:resource="univ:Cours"/>
+    <rdfs:range rdf:resource="xsd:string"/>
+    <rdfs:label>Intitulé du cours</rdfs:label>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="univ:faitPartieDuSemestre">
+    <rdfs:domain rdf:resource="univ:Cours"/>
+    <rdfs:range rdf:resource="univ:Semestre"/>
+    <rdfs:label>Fait partie du semestre</rdfs:label>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="univ:aNote">
+    <rdfs:domain rdf:resource="univ:Cours"/>
+    <rdfs:range rdf:resource="univ:Note"/>
+    <rdfs:label>Note obtenue</rdfs:label>
+  </rdf:Property>
+
+
+  <rdf:Property rdf:about="univ:valeur">
+    <rdfs:domain rdf:resource="univ:Note"/>
+    <rdfs:range rdf:resource="xsd:float"/>
+    <rdfs:label>Valeur</rdfs:label>
+  </rdf:Property>
+
+</rdf:RDF>
+
+Ajout du fichier RDF Schema pour le projet
